@@ -1,19 +1,24 @@
+import Home from './components/Home'
 import './App.css'
-import BottomNavigation from './components/BottomNavigation'
-import Navbar from './components/Navbar'
-import TaskList from './components/TaskList'
-import TomorroePreview from './components/TomorrowPreview'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import NewTask from './components/NewTask'
+
+
 
 function App() {
 
 
   return (
-    <div>
-     <Navbar />
-     <TaskList />
-     <TomorroePreview />
-     <BottomNavigation />
-    </div>
+    <BrowserRouter>
+  
+      <Routes>
+        <Route path="/" element={<Home />}/>
+         <Route path="/" element={<NewTask />}/>
+      </Routes>
+    // <div></div></BrowserRouter>
+ 
+    // <Home />
+    // </div>
   )
 }
 

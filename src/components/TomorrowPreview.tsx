@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const TodayTasks = () => {
-  const tasks = [
+const TomorrowPreview = () => {
+ const tasks = [
     { title: "Shopping", datetime: "Sep 8, 2025 - 10:00 AM" },
     { title: "Meeting", datetime: "Sep 8, 2025 - 2:00 PM" },
     { title: "Gym", datetime: "Sep 8, 2025 - 5:00 PM" },
@@ -10,7 +10,7 @@ const TodayTasks = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCount = 2; // ekranda aynı anda kaç kart görünsün
+  const visibleCount = 2;
 
   const handlePrev = () => {
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
@@ -23,11 +23,10 @@ const TodayTasks = () => {
   };
 
   return (
-    <div className="p-4 pb-24"> {/* Bottom Navigation üstüne binmemesi için pb-24 */}
+    <div className="p-4 pt-4 pb-[120px]"> {/* bottom navigation için padding */}
       <h2 className="text-blue-900 text-2xl font-bold mb-4">Tomorrow</h2>
 
       <div className="flex items-center gap-2">
-        {/* Sol ok */}
         <button onClick={handlePrev} disabled={currentIndex === 0}>
           <ChevronLeft
             size={28}
@@ -35,8 +34,7 @@ const TodayTasks = () => {
           />
         </button>
 
-        {/* Kartlar */}
-        <div className="flex overflow-hidden flex-1 gap-2">
+        <div className="flex flex-1 gap-2 overflow-x-auto scrollbar-hide">
           {tasks
             .slice(currentIndex, currentIndex + visibleCount)
             .map((task, index) => (
@@ -50,7 +48,6 @@ const TodayTasks = () => {
             ))}
         </div>
 
-        {/* Sağ ok */}
         <button
           onClick={handleNext}
           disabled={currentIndex >= tasks.length - visibleCount}
@@ -69,4 +66,4 @@ const TodayTasks = () => {
   );
 };
 
-export default TodayTasks;
+export default TomorrowPreview;

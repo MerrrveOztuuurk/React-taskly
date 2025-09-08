@@ -13,3 +13,11 @@
 .react-datepicker__navigation-button {
   color: white !important;
 }
+/* Scrollbar gizlemek için */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE ve Edge */
+  scrollbar-width: none; /* Firefox */
+}
