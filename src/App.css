@@ -1,0 +1,15 @@
+.react-datepicker {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-datepicker__day,
+.react-datepicker__day-name {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.react-datepicker__navigation-button {
+  color: white !important;
+}
