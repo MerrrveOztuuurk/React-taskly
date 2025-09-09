@@ -9,7 +9,7 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className='h-screen'>
      <Navbar />
      <TaskList />
      <TomorrowPreview />

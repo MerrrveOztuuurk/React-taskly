@@ -21,3 +21,10 @@
   -ms-overflow-style: none; /* IE ve Edge */
   scrollbar-width: none; /* Firefox */
 }
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Yan kaydırmayı kapatır */
+}
