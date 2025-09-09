@@ -1,7 +1,7 @@
-import Home from './components/Home'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import NewTask from './components/NewTask'
+import NewTask from './screens/NewTask'
+import Home from './screens/Home'
 
 
 
@@ -10,12 +10,11 @@ function App() {
 
   return (
     <BrowserRouter>
-  
       <Routes>
         <Route path="/" element={<Home />}/>
-         <Route path="/" element={<NewTask />}/>
+         <Route path="/newtask" element={<NewTask />}/>
       </Routes>
-    // <div></div></BrowserRouter>
+    </BrowserRouter>
  
     // <Home />
     // </div>
