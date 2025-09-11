@@ -4,16 +4,15 @@ import TaskList from '../components/TaskList'
 import TomorrowPreview from '../components/TomorrowPreview'
 import BottomNavigation from '../components/BottomNavigation'
 
-
 const Home = () => {
-
-
   return (
-    <div className='h-screen'>
-     <Navbar />
-     <TaskList />
-     <TomorrowPreview />
-     <BottomNavigation />
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <div className="flex-1 overflow-y-auto">
+        <TaskList />
+        <TomorrowPreview />
+      </div>
+      <BottomNavigation />
     </div>
   )
 }
